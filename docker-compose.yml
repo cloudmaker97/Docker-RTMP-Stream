@@ -1,0 +1,9 @@
+services:
+  ffmpeg_stream:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./video:/app/video:ro
+      - ./audio:/app/audio:ro
